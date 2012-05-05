@@ -28,9 +28,6 @@ define('FLICKREE_PLUGIN_NAME', 'flickree');
 define('FLICKREE_PREFIX', 'Flc');
 define('FLICKREE_FILE', __FILE__);
 define('FLICKREE_DIR_PATH', plugin_dir_path(__FILE__));
-define('FLICKREE_TEMPLATES_DIR', plugin_dir_path(__FILE__) . 'Templates/');
-define('FLICKREE_HELPERS_DIR', plugin_dir_path(__FILE__) . 'Helpers/');
-define('FLICKREE_LIBRARIES_DIR', plugin_dir_path(__FILE__) . 'Libaries/');
 
 // dependencies
 require('inc/User.php');
