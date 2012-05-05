@@ -29,6 +29,9 @@ define('FLICKREE_PREFIX', 'Flc');
 define('FLICKREE_FILE', __FILE__);
 define('FLICKREE_DIR_PATH', plugin_dir_path(__FILE__));
 
+// Set up localisation
+$this->load_plugin_textdomain();
+
 // dependencies
 require('inc/User.php');
 require('inc/Menu.php');
