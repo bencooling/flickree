@@ -23,14 +23,14 @@ a) The properties available for each photo regardless of method used
 b) The arguments available for each query (including convenance arguments "size" and "display")
 
 
-Templates can include the following properties:
+Templates can include all of the data flickr returns for photos including:
 
-id, owner, secret, server, farm, title, ispublic, isfriend, isfamily, stat, description, license, dateupload, datetaken, datetakengranularity, ownername, iconserver, iconfarm, lastupdate, latitude, longitude, accuracy, tags, machine_tags, views, media, pathalias, url_sq, width_sq,  height_sq, url_t, width_t,  height_t, url_s, width_s, height_s, url_m, width_m, height_m, url_z, width_z,  height_z, url_l, width_l, height_l, url_o, width_o,  height_o, photourl, authorurl
+id, owner, server, title, ispublic, description, dateupload, lastupdate, latitude, tags and many many more!
 
 
-Queries can include the following arguments:
+Queries can include any of flickr method attributes as arguments, (all extras are included by default) such as:
 
-'size', 'per_page', 'privacy_filter', 'photo_id', 'photoset_id','extras', 'user_id', 'tags', 'tag_mode', 'text', 'min_upload_date','max_upload_date', 'min_taken_date', 'max_taken_date', 'sort', 'bbox','accuracy', 'safe_search', 'content_type', 'machine_tags', 'machine_tag_mode','group_id', 'contacts', 'woe_id', 'place_id', 'media', 'has_geo', 'geo_context','lat', 'lon', 'radius', 'radius_units', 'is_commons', 'in_gallery', 'is_getty','format', 'nojsoncallback', 'api_key', 'method', 'url', 'gallery_id', 'group_id'
+'privacy_filter', 'text', 'min_upload_date','sort', 'safe_search', 'place_id', 'geo_context' and many many more!
 
 
 == Installation ==
