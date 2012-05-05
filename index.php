@@ -3,7 +3,7 @@
 Plugin Name: flickree
 Plugin URI: http://bcooling.com.au
 Description: Dynamically pull in photos from flickr based on the photoset, group or gallery, a search or a single photo id.
-Version: 0.1
+Version: 0.2
 Author: Ben Cooling
 Author URI: http://bcooling.com.au
 License: Copyright Ben Cooling
@@ -23,7 +23,7 @@ License: Copyright Ben Cooling
 session_start();
 
 // Plugin Constants
-define('FLICKREE_VERSION', '0.1');
+define('FLICKREE_VERSION', '0.2');
 define('FLICKREE_PLUGIN_NAME', 'flickree');
 define('FLICKREE_PREFIX', 'Flc');
 define('FLICKREE_FILE', __FILE__);
