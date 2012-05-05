@@ -68,6 +68,8 @@
       for (i=1;i<=5;i++) {
           c = d('content'+i.toString());
           t = d('tab'+i.toString());
+          di = d('display-input');
+          te = d('template-select');
           if ( n == i ) {
               c.className = '';
               t.className = 'current';
@@ -75,6 +77,17 @@
               c.className = 'hidden';
               t.className = '';
           }
+          // disable display input for photo
+          if (n==1){
+            di.setAttribute('disabled', true);
+            di.value = "1";
+          }
+          else {
+            di.removeAttribute('disabled');
+            di.value = "";
+          }
+          // consitent behaviour with display, reset form element template on tab switch
+          te.value = "default";
       }
   }
   
@@ -137,7 +150,7 @@
       <div class="common">
         <p>
           <label>Template</label>
-          <select name="template">
+          <select name="template" id="template-select">
             <option value="default">Default</option>
             <option value="attributed">Attributed</option>
             <option value="thickbox">Thickbox</option>
@@ -147,7 +160,7 @@
         </p>
         <p>
           <label>Display</label>
-          <input type="text" name="display" />
+          <input id="display-input" type="text" name="display" value="1" disabled="disabled" />
         </p>
       </div>
     </div>
