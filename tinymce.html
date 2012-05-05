@@ -1,0 +1,164 @@
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+  <title>Add flickree gallery</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="tinymce.css?ver=1" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="/wp-includes/js/jquery/jquery.js"></script>
+  <script type="text/javascript" src="/wp-includes/js/tinymce/tiny_mce_popup.js"></script>
+    
+  <script>
+  (function($){
+    $(function(){
+      
+      var $selecttype = $('.selecttype'),
+          $typespecific = $('.typespecific'),
+          $search = $('#search'),
+          $cancel = $('#cancel'),
+          $insert = $('#insert'),
+          $flickree_form = $('#flickree_form');
+      
+      // Show fields relevant to method type
+      $selecttype.change(function(){
+        var $cur = $(this),
+            $typeVisible = $('.typespecific:visible'),
+            type = $cur[0].value.toLowerCase();
+        if ($cur.filter(':animated').length) return;
+        if ($('.typespecific:visible').length) $('.typespecific:visible').slideUp(function(){
+          $('#' + type).slideDown();
+        });
+        else $('#' + type).slideDown();
+      }); 
+      
+      $flickree_form.submit(function(e){
+        var $relevantFields = $(this).find('#flipper div:visible :input'),
+            shortcode = '[flickree';
+        $relevantFields.each(function(){
+          var $cur = $(this).not('#cancel, #insert'),
+              key = $cur.attr('name'),
+              value = $cur.val();
+              if (value){ // if not falsey (undefined, empty string...)
+                shortcode += ' ' + key + '="' + value + '"';
+              }
+        });
+        
+        shortcode += ']';
+
+        // inserts the shortcode into the active editor
+        window.parent.tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
+        tinyMCEPopup.close();
+        // closes Thickbox
+        return false;
+        e.preventDefault;
+      });
+      
+      $insert.bind('click', function(){
+        $flickree_form.trigger('submit');
+        tinyMCEPopup.close();
+      });
+      
+      $cancel.bind('click', function(){
+        tinyMCEPopup.close();
+      });
+      
+    });
+  })(jQuery);
+  
+  function d(id) { return document.getElementById(id); }
+  function flipTab(n) {
+      for (i=1;i<=5;i++) {
+          c = d('content'+i.toString());
+          t = d('tab'+i.toString());
+          if ( n == i ) {
+              c.className = '';
+              t.className = 'current';
+          } else {
+              c.className = 'hidden';
+              t.className = '';
+          }
+      }
+  }
+  
+  </script>
+</head>
+<body>
+  <form id="flickree_form">
+    <ul id="tabs">
+      <li><a id="tab1" href="javascript:flipTab(1)" title="Select a photo" accesskey="1" tabindex="1" class="current">Photo</a></li>
+      <li><a id="tab2" href="javascript:flipTab(2)" title="Photoset images" accesskey="2" tabindex="2" class="">Photoset</a></li>
+      <li><a id="tab3" href="javascript:flipTab(3)" title="Gallery images" accesskey="3" tabindex="3" class="">Gallery</a></li>
+      <li><a id="tab4" href="javascript:flipTab(4)" title="Group images" accesskey="4" tabindex="4" class="">Group</a></li>
+      <li><a id="tab5" href="javascript:flipTab(5)" title="Search for images" accesskey="5" tabindex="5" class="">Search</a></li>
+    </ul>
+    <div id="flipper" class="wrap">
+      <div id="content1" class="">
+        <h2>Select a photo</h2>
+        <p>
+          <label for="photoid">Photo ID</label>
+          <input type="text" name="photo_id" id="photoid">
+          <input type="hidden" name="type" value="photo">
+        </p>
+      </div>
+      <div id="content2" class="hidden">
+        <h2>Photoset images</h2>
+        <p>
+          <label for="photosetid">Photoset ID</label>
+          <input type="text" name="photoset_id" id="photosetid">
+          <input type="hidden" name="type" value="photoset">
+        </p>
+      </div>
+      <div id="content3" class="hidden">
+        <h2>Gallery images</h2>
+        <p>
+          <label for="galleryurl">Gallery URL</label>
+          <input type="text" name="url" id="url">
+          <input type="hidden" name="type" value="gallery">
+        </p>
+      </div>
+      <div id="content4" class="hidden">
+        <h2>Group images</h2>
+        <p>
+          <label for="groupid">Group ID</label>
+          <input type="text" name="group_id" id="groupid">
+          <input type="hidden" name="type" value="group">
+        </p>
+      </div>
+      <div id="content5" class="hidden">
+        <h2>Search for images</h2>
+        <input type="hidden" name="type" value="search">
+        <p id="text">
+          <label for="freetext">Text</label>
+          <input type="text" name="text" id="freetext">
+        </p>
+        <p id="tags">
+          <label for="tags">Tags</label>
+          <input type="text" name="tags" id="tags">
+        </p>
+      </div>
+      <div class="common">
+        <p>
+          <label>Template</label>
+          <select name="template">
+            <option value="default">Default</option>
+            <option value="attributed">Attributed</option>
+            <option value="thickbox">Thickbox</option>
+            <option value="caption">Caption</option>
+            <option value="custom" id="custom">Custom</option>
+          </select>
+        </p>
+        <p>
+          <label>Display</label>
+          <input type="text" name="display" />
+        </p>
+      </div>
+    </div>
+  </form>
+  <div class="mceActionPanel">
+    <div style="float: left">
+      <input type="button" id="cancel" name="cancel" value="Cancel">
+    </div>
+    <div style="float: right">
+      <input type="submit" id="insert" name="insert" value="Insert">
+    </div>
+  </div>
+</body>
+</html>
