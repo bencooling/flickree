@@ -52,14 +52,14 @@ approach: it can be as simple or as complex as you like.
 
 Flickree steers away from elaborate markup, dependencies and full-featured galleries. Instead Flickree
 empowers you to easily integrate flickr with your gallery of choice - orbit, fancybox, lightbox etc.
-Having said that, Flickree is pretty gentle on newcomers, providing a thickbox template out of the box.
+Having said that, flickree is pretty gentle on newcomers, providing a thickbox template out of the box.
 
 Flickree also comes with three other templates: default (minimal layout), attributed (for creative 
 commons attribution) and caption (Wordpress caption markup).
 
 = My thickbox template isn't working =
 
-As thickbox keeps the markup separate from any dependent style and script, we just need to paste 
+As flickree keeps the markup separate from any dependent style and script, we just need to paste 
 the following code into your functions.php file:
 
 `add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
@@ -78,4 +78,7 @@ function my_enqueue_scripts(){
 * Initial release
 
 = 0.2 =
-* Added readme.txt file adn fixed bug in index.php
+* Added readme.txt file and fixed bug in index.php
+
+= 0.3 =
+* Added banner and corrected some issues with plugin presentation
