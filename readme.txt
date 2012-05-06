@@ -14,7 +14,7 @@ Dynamically pull in photos from flickr based on the photoset, group or gallery, 
 
 Dynamically pull in photos from flickr based on the photoset, group or gallery, a search or a single photo id.
 
-Wordpress editor button provided for simple queries or manually add short code attributes for more complex requirements (All flickr API method-specific arguments are available)
+Fickree provides an editor button for simple queries, but feel free to manually add short code attributes for more complex requirements (All flickr API method-specific arguments are available)
 
 Control your own markup with mustache-based templating (Comes with 4 templates out of the box - attributed, caption, default and thick box).
 
@@ -41,6 +41,7 @@ e.g.
 
 1. Upload `flickree` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
+1. Navigate to Settings > flickree and add your Flickr api key
 1. Use the flickree editor button or manually add a shortcode to your pages [flickree type="search" tags="starfish"]
 
 == Frequently Asked Questions ==
@@ -69,6 +70,14 @@ function my_enqueue_scripts(){
   wp_enqueue_script('thickbox'); //include Thickbox jQuery plugin
 }`
 
+= Where can I get my flickr api key? =
+http://www.youtube.com/watch?v=r8XmXuMdLWE
+
+= How do I get my Flickr photoset_id? =
+http://www.flickr.com/help/forum/74809/?search=photoset
+
+= How do I get my Flickr group id? =
+http://idgettr.com/
 
 == Screenshots ==
 
@@ -78,7 +87,7 @@ function my_enqueue_scripts(){
 * Initial release
 
 = 0.2 =
-* Added readme.txt file and fixed bug in index.php
+* Added readme.txt file adn fixed bug in index.php
 
 = 0.3 =
 * Added banner and corrected some issues with plugin presentation
