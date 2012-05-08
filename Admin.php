@@ -62,11 +62,7 @@ class FlcAdmin {
     	'isUserLoggedIn' => is_user_logged_in(),
     	'ajaxurl'        => admin_url('admin-ajax.php')
     ));
-    // Stylsheets
-    wp_enqueue_style( FLICKREE_PLUGIN_NAME, plugins_url('Admin.css', FLICKREE_FILE), array(), time() );
     wp_enqueue_style( FLICKREE_PLUGIN_NAME, plugins_url('tinymce.css', FLICKREE_FILE), array(), time() );
-    // Javascripts
-    wp_enqueue_script( FLICKREE_PLUGIN_NAME, plugins_url('Admin.js', FLICKREE_FILE), array('jquery'), time() );    
   }
     
   /**
