@@ -19,7 +19,6 @@ class FlcAdmin {
     add_action('admin_head', array($this, 'my_admin_head'));
     add_action('admin_enqueue_scripts', array($this, 'my_admin_enqueue_scripts'));
     add_action('admin_menu', array($this, 'my_admin_menu'));
-    add_action('admin_footer', array($this, 'my_admin_footer'));
     
   }
   
@@ -110,33 +109,7 @@ class FlcAdmin {
     </div>
     <?php
   }
-  
-  public function my_admin_footer(){
-//    // render flickree_form
-//    $tpl = file_get_contents( plugins_url('tinymce.mustache', FLICKREE_FILE) );
-//    // populate template options based on templates 
-//    $dh = opendir( FLICKREE_DIR_PATH . '/templates' );
-//    $templates = array();
-//    while ($template = readdir($dh)) {
-//      if ($name = str_replace('.mustache', '',$template)){
-//        if ($name[0] != '.') array_push($templates, ucfirst($name));
-//      }
-//    }
-//    // populate types by files not beginning with Fickree in classes dir
-//    $dh = opendir( FLICKREE_DIR_PATH . '/classes' );
-//    $types = array();
-//    while ($type = readdir($dh)) {
-//      if ( $name = str_replace('.class.php', '',$type)){
-//        if ($name[0] != '.') {
-//          if (substr($name, 0, 8) != 'Flickree') array_push($types, ucfirst($name));
-//        }
-//      }
-//    }
-//    $data = array('templates'=>$templates, 'types'=>$types);
-//    $m = new Mustache();
-//    echo $m->render($tpl, $data);
-  }
-  
+    
   public function my_register_activation_hook(){}
   public function my_register_deactivation_hook(){}  
   
