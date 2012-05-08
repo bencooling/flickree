@@ -12,11 +12,9 @@ class FlcAdmin {
   
   public function __construct(){
     
-    register_activation_hook( FLICKREE_FILE, array($this, 'my_register_activation_hook'));
     register_deactivation_hook( FLICKREE_FILE, array($this, 'my_register_deactivation_hook'));
     
     add_action('admin_init', array($this, 'my_admin_init'));
-    add_action('admin_head', array($this, 'my_admin_head'));
     add_action('admin_enqueue_scripts', array($this, 'my_admin_enqueue_scripts'));
     add_action('admin_menu', array($this, 'my_admin_menu'));
     
@@ -51,9 +49,7 @@ class FlcAdmin {
   }
   function my_mce_version($version) {
     return ++$version;
-   }
-  
-  public function my_admin_head(){}
+  }
     
   public function my_admin_enqueue_scripts(){
     // Javascript global variables 
@@ -110,7 +106,7 @@ class FlcAdmin {
     <?php
   }
     
-  public function my_register_activation_hook(){}
+  // @TODO: Remove option from db for api key
   public function my_register_deactivation_hook(){}  
   
 }
