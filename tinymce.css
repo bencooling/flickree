@@ -4,7 +4,7 @@
 html {
   height:100%;
 }
-body {
+.flickree_wrapper {
   font:12px/1.4em sans-serif; min-height:100%; padding:0; margin: 0px 8px 0 8px !important;
 }
 #flickree_form {
