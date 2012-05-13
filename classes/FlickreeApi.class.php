@@ -124,7 +124,7 @@ abstract class FlickreeApi {
           $myFlickrPhoto->$param = $photo[$param]['_content'];
         }
         else {
-          $myFlickrPhoto->$param = $photo[$param];
+          $myFlickrPhoto->$param = (array_key_exists($param, $photo)) ? $photo[$param] : '';
         }
       }
       return $myFlickrPhoto;

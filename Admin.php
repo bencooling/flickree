@@ -95,7 +95,7 @@ class FlcAdmin {
               ?>
               <label>Enter key here:</label>
               <input name="flickree_options[apikey]" id="flickree_options[apikey]" type="text" 
-                     value="<?php echo $flickree_options['apikey']; ?>" size="48" style="margin:10px 0" />
+                     value="<?php echo ($flickree_options['apikey']) ? $flickree_options['apikey'] : ''; ?>" size="48" style="margin:10px 0" />
               <br />
               <input name="submit" type="submit" class="button-primary" value="<?php _e('Save') ?>" />
             </form>
