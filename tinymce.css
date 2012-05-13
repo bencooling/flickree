@@ -44,37 +44,34 @@ html {
   background-image: linear-gradient(bottom, #DDD, white);
 }
 
-body {
-    min-width: 0;
-}
-#wphead {
+.flickree_wrapper #wphead {
     font-size: 80%;
     border-top: 0;
     color: #555;
     background-color: #f1f1f1;
 }
-#wphead h1 {
+.flickree_wrapper #wphead h1 {
     font-size: 24px;
     color: #555;
     margin: 0;
     padding: 10px;
 }
-#tabs {
+.flickree_wrapper #tabs {
     padding: 15px 15px 3px;
     background-color: #f1f1f1;
     border-bottom: 1px solid #dfdfdf;
     margin: 0;
 }
-#tabs li {
+.flickree_wrapper #tabs li {
     display: inline;
 }
-#tabs a.current {
+.flickree_wrapper #tabs a.current {
     background-color: #fff;
     border-color: #dfdfdf;
     border-bottom-color: #fff;
     color: #d54e21;
 }
-#tabs a {
+.flickree_wrapper #tabs a {
     color: #2583AD;
     padding: 6px;
     border-width: 1px 1px 0;
@@ -82,75 +79,71 @@ body {
     border-color: #f1f1f1;
     text-decoration: none;
 }
-#tabs a:hover {
+.flickree_wrapper #tabs a:hover {
     color: #d54e21;
 }
-.wrap h2 {
+.flickree_wrapper .wrap h2 {
     border-bottom-color: #dfdfdf;
     color: #555;
     margin: 10px 0 15px 0;
     padding: 0;
     font-size: 18px;
 }
-#user_info {
+.flickree_wrapper #user_info {
     right: 5%;
     top: 5px;
 }
-h3 {
+.flickree_wrapper h3 {
     font-size: 1.1em;
     margin-top: 10px;
     margin-bottom: 0px;
 }
-#flipper {
+.flickree_wrapper #flipper {
     margin: 0;
     padding: 5px 20px 10px;
     background-color: #fff;
     border-left: 1px solid #dfdfdf;
     border-bottom: 1px solid #dfdfdf;
 }
-* html {
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-#flipper div p {
+.flickree_wrapper #flipper div p {
     text-align: justify;
 }
-th {
+.flickree_wrapper th {
     text-align: center;
 }
-.top th {
+.flickree_wrapper .top th {
     text-decoration: underline;
 }
-.top .key {
+.flickree_wrapper .top .key {
     text-align: center;
     width: 5em;
 }
-.top .action {
+.flickree_wrapper .top .action {
     text-align: left;
 }
-.align {
+.flickree_wrapper .align {
     border-left: 3px double #333;
     border-right: 3px double #333;
 }
-.keys {
+.flickree_wrapper .keys {
     margin-bottom: 15px;
 }
-.keys p {
+.flickree_wrapper .keys p {
     display: inline-block;
     margin: 0px;
     padding: 0px;
 }
-.keys .left { text-align: left; }
-.keys .center { text-align: center; }
-.keys .right { text-align: right; }
-td b {
+.flickree_wrapper .keys .left { text-align: left; }
+.flickree_wrapper .keys .center { text-align: center; }
+.flickree_wrapper .keys .right { text-align: right; }
+.flickree_wrapper td b {
     font-family: "Times New Roman" Times serif;
 }
-#buttoncontainer {
+.flickree_wrapper #buttoncontainer {
     text-align: center;
     margin-bottom: 20px;
 }
-#buttoncontainer a, #buttoncontainer a:hover {
+.flickree_wrapper #buttoncontainer a, #buttoncontainer a:hover {
     border-bottom: 0px;
 }
 
