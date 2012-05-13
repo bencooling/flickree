@@ -2,25 +2,23 @@
 Contributors: global_1981
 Donate link: http://bcooling.com.au
 Tags: flickr, api, images, gallery, photo, yahoo, flickree
-Requires at least: 3.3.1
-Tested up to: 3.3.1
+Requires at least: 2.9.1
+Tested up to: 3.3.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Dynamically pull in photos from flickr based on the photoset, group or gallery, a search or a single photo id.
+Easily get photos from flickr based on a photo, photoset or group ID, a gallery URL or a search text or tag.
 
 == Description ==
 
-Dynamically pull in photos from flickr based on the photoset, group or gallery, a search or a single photo id.
-
-Fickree provides an editor button for simple queries, but feel free to manually add short code attributes for more complex requirements (All flickr API method-specific arguments are available)
+Fickree provides an editor button for simple flickr queries, but feel free to manually add short code attributes for more complex requirements (All flickr API method-specific arguments are available)
 
 Control your own markup with mustache-based templating (Comes with 4 templates out of the box - attributed, caption, default and thick box).
 
 Standardises:
 a) The properties available for each photo regardless of method used
-b) The arguments available for each query (including convenance arguments "size" and "display")
+b) The arguments available for each query (including convenience arguments "size" and "display")
 
 
 Templates can include all of the data flickr returns for photos including:
