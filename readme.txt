@@ -79,6 +79,13 @@ http://idgettr.com/
 
 == Screenshots ==
 
+1. The flickree editor button
+2. The editor dialog for inserting a single photo
+3. The editor dialog for inserting photos from a photoset
+4. The editor dialog for inserting photos from a gallery
+5. The editor dialog for inserting photos from a group
+6. The editor dialog for inserting photos based on a text and or tag search
+
 == Changelog ==
 
 = 0.1 =
