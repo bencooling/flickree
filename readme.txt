@@ -3,7 +3,7 @@ Contributors: global_1981
 Donate link: http://bcooling.com.au
 Tags: flickr, api, images, gallery, photo, yahoo, flickree
 Requires at least: 2.9.1
-Tested up to: 3.3.2
+Tested up to: 3.4.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
